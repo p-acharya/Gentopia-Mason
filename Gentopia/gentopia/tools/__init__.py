@@ -9,6 +9,7 @@ from .arxiv_search import ArxivSearch
 from .weather import *
 from .shell import RunShell
 from .search_doc import SearchDoc
+from .search_pdf import ExtractPdf
 from .gradio import *
 from .code_interpreter import PythonCodeInterpreter
 from .file_operation import WriteFile, ReadFile
@@ -22,6 +23,7 @@ def load_tools(name: str) -> BaseTool:
         "python_code_interpreter": PythonCodeInterpreter,
         "write_file": WriteFile,
         "read_file": ReadFile,
+        "google_scholar": GoogleScholar,
         "google_search": GoogleSearch,
         "text_to_speech": TTS,
         "image_caption": ImageCaption,
@@ -40,6 +42,7 @@ def load_tools(name: str) -> BaseTool:
         "search_author_by_interests": SearchAuthorByInterests,
         "author_uid2paper": AuthorUID2Paper,
         "search_paper": SearchPaper,
+        "extract_pdf": ExtractPdf,
         "search_single_paper": SearchSinglePaper,
         "search_related_paper": SearchRelatedPaper,
         "search_cite_paper": SearchCitePaper,
